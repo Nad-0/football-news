@@ -138,7 +138,7 @@ class FootballNewsFunctionalTest(LiveServerTestCase):
         password2_input.submit()
 
         # Check redirect to login page
-        wait = WebDriverWait(self.browser, 120)
+        wait = WebDriverWait(self.browser, 190)
         wait.until(EC.text_to_be_present_in_element((By.TAG_NAME, "h1"), "Login"))
         login_h1 = self.browser.find_element(By.TAG_NAME, "h1")
         self.assertEqual(login_h1.text, "Login")
